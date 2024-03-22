@@ -1,15 +1,15 @@
 
-function NotFount() {
+function NotFound() {
   
 
   return (
     <>
       <h1 className="bg-red-200">
-      NotFount
+      NotFound
     </h1>
       
     </>
   )
 }
 
-export default NotFount
+export default NotFound
