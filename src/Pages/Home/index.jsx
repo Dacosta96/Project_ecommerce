@@ -1,5 +1,6 @@
 import { useState,useEffect } from "react"
 import Card from "../../Components/Card"
+import ProductDetail from "../../Components/ProductDetail/idex"
 
 function Home() {
     const[items,setItems] = useState(null) // Inicializar estado
@@ -10,11 +11,11 @@ function Home() {
             .then(data=>setItems(data))
 
     },[]) 
-    console.log(items)
   return (
   
-      <div>
+      <div className='flex flex-col items-center mt-10'>
         Home
+        
         <div className='grid gap-4 grid-cols-4 w-full max-w-screen-lg '>
         {
           items?.map(item=>( // enviar informacion de API al componente card
@@ -22,6 +23,8 @@ function Home() {
           ))
         }
         </div>
+        <ProductDetail/>
+ 
       </div>
      
   //    <Layout>
