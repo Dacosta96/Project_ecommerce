@@ -5,11 +5,18 @@ import { createContext, useState} from "react";
 // eslint-disable-next-line react/prop-types
 export const ShoppingCardProvider =({children}) =>{
 
-    const[count,setCount] = useState(0) // contador compras
+    // couter shopping
+    const[count,setCount] = useState(0) 
 
+    // open - close card detail
     const[isProductDetailopen, setIsProductDetailopen ] = useState(false)
     const openProductDetail =()=>  setIsProductDetailopen(true)
     const closeProductDetail =()=> setIsProductDetailopen(false)
+
+    // product show card
+    const [productShow, setProductShow] =useState({})
+
+    const[addProducts , setAddProducts] = useState([])
     
     return (
         <ShoppingCardContext.Provider value={{
@@ -17,7 +24,11 @@ export const ShoppingCardProvider =({children}) =>{
             setCount,
             isProductDetailopen,
             openProductDetail,
-            closeProductDetail
+            closeProductDetail,
+            productShow,
+            setProductShow,
+            addProducts,
+            setAddProducts
         }}>
             {children}
         </ShoppingCardContext.Provider>

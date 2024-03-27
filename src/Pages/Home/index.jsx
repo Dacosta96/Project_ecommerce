@@ -14,7 +14,8 @@ function Home() {
   return (
   
       <div className='flex flex-col items-center mt-10'>
-        Home
+        
+        <p className='font-medium mb-6'>Home</p>
         
         <div className='grid gap-4 grid-cols-4 w-full max-w-screen-lg '>
         {
