@@ -25,12 +25,8 @@ function Home() {
         }
         </div>
         <ProductDetail/>
- 
+    
       </div>
-     
-  //    <Layout>
-  //    Home
-  //  </Layout>
     
   )
 }
