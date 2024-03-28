@@ -23,6 +23,10 @@ export const ShoppingCardProvider =({children}) =>{
     const[isCheckoutMenu, setIsCheckoutMenu ] = useState(false)
     const openCheckoutMenu =()=>  setIsCheckoutMenu(true)
     const closeCheckoutMenu =()=> setIsCheckoutMenu(false)
+
+    // shopping order
+    const[order , setOrder] = useState([])
+
     
     return (
         <ShoppingCardContext.Provider value={{
@@ -37,7 +41,9 @@ export const ShoppingCardProvider =({children}) =>{
             setAddProducts,
             isCheckoutMenu,
             openCheckoutMenu,
-            closeCheckoutMenu
+            closeCheckoutMenu,
+            order,
+            setOrder
         }}>
             {children}
         </ShoppingCardContext.Provider>

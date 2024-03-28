@@ -38,8 +38,12 @@ const context = useContext(ShoppingCardContext)
           correo
         </li>
         <li>
+          <NavLink to="/MyOrders" className={({isActive}) => isActive?activeStyle:undefined}>My Orders</NavLink>
+        </li>
+        <li>
           <NavLink to="/MyAccount" className={({isActive}) => isActive?activeStyle:undefined}>My account</NavLink>
         </li>
+      
         <li>
           <NavLink to="/SignIn" className={({isActive}) => isActive?activeStyle:undefined}>SignIn</NavLink>
         </li>
