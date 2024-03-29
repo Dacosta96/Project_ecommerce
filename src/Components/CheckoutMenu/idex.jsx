@@ -27,6 +27,8 @@ function CheckoutMenu() {
     context.setOrder([...context.order, orderAdd])
     context.setAddProducts([])
     context.closeCheckoutMenu()
+
+    context.setSearch(null)
    
   }
  
