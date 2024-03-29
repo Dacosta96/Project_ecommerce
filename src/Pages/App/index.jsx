@@ -1,6 +1,7 @@
 import { useRoutes, BrowserRouter } from "react-router-dom";
 import {ShoppingCardProvider} from "../../contex";
 import Home from "../Home";
+import Clothes from "../Clothes"
 import MyAccount from "../MyAccount";
 import MyOrder from "../MyOrder";
 import MyOrders from "../MyOrders";
@@ -9,10 +10,15 @@ import SignIn from "../SignIn";
 import Navbar from "../../Components/Navbar";
 import "./App.css";
 import CheckoutMenu from "../../Components/CheckoutMenu/idex";
+import Electronics from "../Electronics";
+import Jewelery from "../Jewelery";
 
 const AppRoutes = () => {
   let routes = useRoutes([
     { path: "/", element: <Home /> },
+    { path: "Clothes", element: <Clothes /> },
+    { path: "Electronics", element: <Electronics /> },
+    { path: "Jewelery", element: <Jewelery /> },
     { path: "MyAccount", element: <MyAccount /> },
     { path: "MyOrder", element: <MyOrder /> },
     { path: "MyOrders", element: <MyOrders /> },

@@ -8,7 +8,7 @@ const activeStyle = 'underline'
 const context = useContext(ShoppingCardContext)
 
   return (
-    <nav className='flex justify-between items-center fixed z-10 top-0 w-full py-5 px-8'>
+    <nav className='flex justify-between items-center fixed z-10 top-0 w-full py-5 px-8 bg-black/90 text-white'>
       <ul className='flex items-center gap-5'>
       <li className='font-semibold text-lg'>
           <NavLink to="/">Shopi</NavLink>
@@ -23,13 +23,7 @@ const context = useContext(ShoppingCardContext)
           <NavLink to="/electronics" className={({isActive}) => isActive?activeStyle:undefined}>Electronics</NavLink>
         </li>
         <li>
-          <NavLink to="/furnitures" className={({isActive}) => isActive?activeStyle:undefined}>Furnitures</NavLink>
-        </li>
-        <li>
-          <NavLink to="/toys" className={({isActive}) => isActive?activeStyle:undefined}>Toys</NavLink>
-        </li>
-        <li>
-          <NavLink to="/others" className={({isActive}) => isActive?activeStyle:undefined}>Others</NavLink>
+          <NavLink to="/jewelery" className={({isActive}) => isActive?activeStyle:undefined}>Jewelery</NavLink>
         </li>
       </ul>
 
@@ -49,7 +43,7 @@ const context = useContext(ShoppingCardContext)
         </li>
         <li className='flex'>
           <ShoppingCartIcon  className="h-6 w-6 text-black-500 cursor-pointer" />
-          <div>{context.count}</div>
+          <div>{context.addProducts.length}</div>
         </li>
       </ul>
     </nav>
