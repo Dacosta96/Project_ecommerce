@@ -11,20 +11,20 @@ function MyOrders() {
   return (
     <>
    
-      <h1 className="bg-red-200"> My Orders</h1>
+      <h1 className=" p-3 text-2xl"> My Orders</h1>
      
+     <div className="w-72 ">
       { 
         context.order.map((order,index) =>(
       <Link key={index} to={`/MyOrders/${index}`}> 
          <OrdersCart
           totalPrice={order.totalPrice}
           totalProducts={order.totalProducts}
-         
          /> 
          </Link>
         ))
       }
-
+    </div>
       
     </>
   )
