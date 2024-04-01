@@ -1,7 +1,7 @@
 import { useRoutes, BrowserRouter } from "react-router-dom";
-import {ShoppingCardProvider} from "../../contex";
+import { ShoppingCardProvider } from "../../contex";
 import Home from "../Home";
-import Clothes from "../Clothes"
+import Clothes from "../Clothes";
 import MyAccount from "../MyAccount";
 import MyOrder from "../MyOrder";
 import MyOrders from "../MyOrders";
@@ -36,7 +36,7 @@ function App() {
     <ShoppingCardProvider>
       <BrowserRouter>
         <Navbar />
-        <CheckoutMenu/>
+        <CheckoutMenu />
         <AppRoutes />
       </BrowserRouter>
     </ShoppingCardProvider>

@@ -26,7 +26,7 @@ function Card(data) {
     if (isInCart) {
       return (
         <div className="absolute top-0 right-0 flex justify-center items-center bg-white/65 w-6 h-6 rounded-full m-2">
-          <CheckIcon className="h-6 w-6 text-emerald-600 cursor-pointer" /> 
+          <CheckIcon className="h-6 w-6 text-emerald-600 cursor-pointer" />
         </div>
       );
     } else {
