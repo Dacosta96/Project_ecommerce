@@ -28,7 +28,6 @@ function Home() {
     }
   };
 
-  console.log(context.search);
   return (
     <div className="flex flex-col items-center mt-10">
       <p className=" text-2xl font-medium mb-4">Home</p>

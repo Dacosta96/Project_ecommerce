@@ -2,6 +2,34 @@ import { createContext, useState, useEffect } from "react";
 
 export const ShoppingCardContext = createContext();
 
+
+  ///// Local Storage ////
+
+// eslint-disable-next-line react-refresh/only-export-components
+export const initializeLocalStorage = ()=>{
+  const accountInLocalStorage = localStorage.getItem('account')
+  const signOutInLocalStorage = localStorage.getItem('sign-out')
+  let parsedAccount
+  let parsedSignOut
+
+  if(!accountInLocalStorage){
+    localStorage.setItem('account',JSON.stringify({}))
+    parsedAccount ={}
+  }else{
+    // eslint-disable-next-line no-unused-vars
+    parsedAccount = JSON.parse(accountInLocalStorage)
+  }
+
+  if(!signOutInLocalStorage){
+    localStorage.setItem('sign-out',JSON.stringify(false))
+    parsedSignOut =false
+  }else{
+    // eslint-disable-next-line no-unused-vars
+    parsedSignOut = JSON.parse(signOutInLocalStorage)
+  }
+
+}
+
 // eslint-disable-next-line react/prop-types
 export const ShoppingCardProvider = ({ children }) => {
   // couter shopping
@@ -51,6 +79,15 @@ export const ShoppingCardProvider = ({ children }) => {
     if (search) setFilteredItems(filteredItemsByTitle(items, search));
   }, [items, search]);
 
+
+  // local storage
+
+  const [account, setAccount] = useState({}); // Inicializar estado
+  const [signout, setSignout] = useState(false); // filtrado
+
+
+
+
   return (
     <ShoppingCardContext.Provider
       value={{
@@ -73,6 +110,10 @@ export const ShoppingCardProvider = ({ children }) => {
         search,
         setSearch,
         filteredItems,
+        account,
+        setAccount,
+        signout,
+        setSignout,
       }}
     >
       {children}

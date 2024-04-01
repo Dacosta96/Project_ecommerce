@@ -27,7 +27,7 @@ function CheckoutMenu() {
     context.setAddProducts([]);
     context.closeCheckoutMenu();
 
-    context.setSearch(null);
+    context.setSearch(null); // clean search
   };
 
   return (
