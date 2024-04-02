@@ -1,6 +1,7 @@
 import Card from "../../Components/Card";
 import { useContext } from "react";
 import { ShoppingCardContext } from "../../contex";
+import ProductDetail from "../../Components/ProductDetail/idex";
 
 function Jewelery() {
   const context = useContext(ShoppingCardContext);
@@ -21,6 +22,7 @@ function Jewelery() {
           )
         )}
       </div>
+      <ProductDetail />
     </div>
   );
 }

@@ -4,9 +4,9 @@ function NotFound() {
 
   return (
     <>
-      <h1 className="bg-red-200">
-      NotFound
-    </h1>
+     <div className="flex  items-center justify-center">
+      <p className="text-center text-4xl font-medium mb-200">This page is not available</p>
+</div>
       
     </>
   )
