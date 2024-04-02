@@ -2,6 +2,8 @@ import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { ShoppingCartIcon } from "@heroicons/react/24/solid";
 import { Bars4Icon } from "@heroicons/react/24/solid";
+import { AdjustmentsVerticalIcon } from "@heroicons/react/24/solid";
+
 import { ShoppingCardContext } from "../../contex";
 
 function Navbar() {
@@ -37,7 +39,7 @@ function Navbar() {
     if (hasUserAnAccount && !isUserSignOut) {
       return (
         <>
-          <li className="text-white/60">{parsedAccount?.email}</li>
+          <li className="text-white/60 max-md:hidden">{parsedAccount?.email}</li>
           <li>
             <NavLink
               to="/MyOrders"
@@ -47,6 +49,7 @@ function Navbar() {
               My Orders
             </NavLink>
           </li>
+          <div className="max-md:hidden">
           <li>
             <NavLink
               to="/MyAccount"
@@ -65,6 +68,11 @@ function Navbar() {
               Sign-Out
             </NavLink>
           </li>
+          </div>
+
+          <div className=" hidden max-md:flex">
+        <AdjustmentsVerticalIcon className="h-6 w-6 text-black-500 cursor-pointer" />
+      </div>
         </>
       );
     } else {
@@ -84,10 +92,14 @@ function Navbar() {
 
   return (
     <nav className="flex justify-between items-center fixed z-10 top-0 w-full py-5 px-8 first-line: bg-black/90 text-white">
-      <ul className="flex items-center gap-5 max-md:hidden">
+      <ul className="flex items-center gap-5">
+      <div className=" hidden max-md:flex">
+        <Bars4Icon className="h-6 w-6 text-black-500 cursor-pointer" />
+      </div>
         <li className="font-semibold text-lg">
           <NavLink to={`${isUserSignOut ? "/SignIn" : "/"}`}>Shopi</NavLink>
         </li>
+        <div className="flex items-center gap-5 max-md:hidden"> 
         <li>
           <NavLink
             to="/"
@@ -123,11 +135,10 @@ function Navbar() {
             Jewelery
           </NavLink>
         </li>
+        </div>
+       
       </ul>
       
-      <div className="hidden max-md:block items-center gap-5">
-        <Bars4Icon className="h-6 w-6 text-black-500 cursor-pointer" />
-      </div>
 
       <ul className="flex items-center gap-5">
         {renderView()}
