@@ -10,7 +10,7 @@ function MyOrders() {
     <>
       <h1 className=" p-3 text-2xl"> My Orders</h1>
 
-      <div className="w-72 ">
+      <div className="w-72 max-md:w-60">
         {context.order.map((order, index) => (
           <Link key={index} to={`/MyOrders/${index}`}>
             <OrdersCart

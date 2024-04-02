@@ -17,6 +17,7 @@ import "./App.css";
 import CheckoutMenu from "../../Components/CheckoutMenu/idex";
 import Electronics from "../Electronics";
 import Jewelery from "../Jewelery";
+import MenuResponsive from "../../Components/menuResponsive";
 
 const AppRoutes = () => {
   const context = useContext(ShoppingCardContext);
@@ -83,6 +84,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <CheckoutMenu />
+        <MenuResponsive />
         <AppRoutes />
       </BrowserRouter>
     </ShoppingCardProvider>

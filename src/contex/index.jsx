@@ -82,6 +82,11 @@ export const ShoppingCardProvider = ({ children }) => {
   const [account, setAccount] = useState({}); // Inicializar estado
   const [signout, setSignout] = useState(false); // filtrado
 
+  // open - close menu responsive
+  const [isMenuResOpen, setIsMenuResOpen] = useState(false);
+  const openMenuRes = () => setIsMenuResOpen(true);
+  const closeMenuRes = () => setIsMenuResOpen(false);
+
   return (
     <ShoppingCardContext.Provider
       value={{
@@ -108,6 +113,9 @@ export const ShoppingCardProvider = ({ children }) => {
         setAccount,
         signout,
         setSignout,
+        openMenuRes,
+        closeMenuRes,
+        isMenuResOpen,
       }}
     >
       {children}

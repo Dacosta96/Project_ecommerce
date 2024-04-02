@@ -39,7 +39,7 @@ function MyAccount() {
 
   const renderEditUserInfo = () => {
     return (
-      <form ref={form} className="flex flex-col gap-4 w-80">
+      <form ref={form} className="flex flex-col gap-4 w-80 max-md:w-auto">
         <div className="flex flex-col gap-1">
           <label htmlFor="name" className="font-light text-sm">
             Name:
@@ -122,7 +122,7 @@ function MyAccount() {
 
   return (
     <>
-      <div className="flex flex-col  border mt-32 w-1/5">
+      <div className="flex flex-col  border mt-32 w-1/5 max-md:w-auto">
         <h1 className="font-medium text-xl pb-5 text-center">My Account</h1>
 
         {renderView()}

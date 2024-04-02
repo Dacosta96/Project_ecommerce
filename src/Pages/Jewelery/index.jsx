@@ -13,7 +13,7 @@ function Jewelery() {
   return (
     <div className=" text-2xl font-medium mb-4">
       <div className=" text-2xl font-medium mb-4">Jewelery</div>
-      <div className="grid gap-4 grid-cols-4 w-full max-w-screen-lg ">
+      <div className="grid gap-4 grid-cols-4 w-full max-w-screen-lg max-sm:grid-cols-1 max-lg:grid-cols-3">
         {filterClothes?.map(
           (
             item // Envía información de la API al componente Card
