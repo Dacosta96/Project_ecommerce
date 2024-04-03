@@ -92,6 +92,9 @@ function Navbar() {
       context.closeMenuRes();
     }
   };
+
+
+
   return (
     <nav className="flex justify-between items-center fixed z-10 top-0 w-full py-5 px-8 first-line: bg-black/90 text-white">
       <ul className="flex items-center gap-5">
@@ -106,7 +109,7 @@ function Navbar() {
             to={`${isUserSignOut ? "/SignIn" : "/"}`}
             onClick={() => context.closeMenuRes()}
           >
-            Shopi
+            Shopi-d
           </NavLink>
         </li>
         <div className="flex items-center gap-5 max-md:hidden">
